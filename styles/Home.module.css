@@ -10,6 +10,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: #232B33;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #aaa;
 }
 
 .footer {
@@ -17,6 +37,7 @@
   background: #232B33;
   color: #fff;
   text-align: center;
+  font-size: 16px;
 }
 
 .footer p {
