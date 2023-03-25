@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-  letter-spacing: .5px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  letter-spacing: 0.5px;
   background-color: #f7fbff;
 }
 
