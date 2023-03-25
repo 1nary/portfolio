@@ -228,7 +228,14 @@
   "resolved" "https://registry.npmjs.org/@mui/core-downloads-tracker/-/core-downloads-tracker-5.11.14.tgz"
   "version" "5.11.14"
 
-"@mui/material@^5.11.14":
+"@mui/icons-material@^5.11.11":
+  "integrity" "sha512-Eell3ADmQVE8HOpt/LZ3zIma8JSvPh3XgnhwZLT0k5HRqZcd6F/QDHc7xsWtgz09t+UEFvOYJXjtrwKmLdwwpw=="
+  "resolved" "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.11.11.tgz"
+  "version" "5.11.11"
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+
+"@mui/material@^5.0.0", "@mui/material@^5.11.14":
   "integrity" "sha512-uoiUyybmo+M+nYARBygmbXgX6s/hH0NKD56LCAv9XvmdGVoXhEGjOvxI5/Bng6FS3NNybnA8V+rgZW1Z/9OJtA=="
   "resolved" "https://registry.npmjs.org/@mui/material/-/material-5.11.14.tgz"
   "version" "5.11.14"
@@ -306,11 +313,6 @@
   "version" "13.2.4"
   dependencies:
     "glob" "7.1.7"
-
-"@next/font@^13.2.4":
-  "integrity" "sha512-lMAnuOYjv5g22WhD00u0DQ9u2rTMJH0S64PKE4Sy8Y2q+FJTYs6ZHT2z3VRoI8+AOWSLK4FirpnygcjOienQ9A=="
-  "resolved" "https://registry.npmjs.org/@next/font/-/font-13.2.4.tgz"
-  "version" "13.2.4"
 
 "@next/swc-darwin-x64@13.2.4":
   "integrity" "sha512-a6LBuoYGcFOPGd4o8TPo7wmv5FnMr+Prz+vYHopEDuhDoMSHOnC+v+Ab4D7F0NMZkvQjEJQdJS3rqgFhlZmKlw=="
