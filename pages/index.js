@@ -1,13 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { gray } from "@mui/material/colors";
 import logo from "../public/logo.jpg";
 import twitter from "../public/twitter.svg";
 import github from "../public/github.svg";
 import Link from "next/link";
 import { GITHUB, TWITTER } from "../config/constant";
-import { fontSize } from "@mui/system";
+import { Button } from "@mui/material";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import SendIcon from "@mui/icons-material/Send";
+import { BorderAllRounded } from "@mui/icons-material";
 
 export default function Home() {
   return (
@@ -19,26 +21,50 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
-          <Image
-            style={{ borderRadius: "999px", border: "4px solid #fff" }}
-            width={150}
-            src={logo}
-            alt="logo"
-          />
+        <div className={styles.top}>
+          <div>
+            <Image
+              style={{ borderRadius: "999px", border: "4px solid #fff" }}
+              width={160}
+              src={logo}
+              alt="logo"
+            />
+          </div>
+          <div className={styles.profile}>
+            <h1 className={styles.profile_name}>狩俣 成駿</h1>
+            <p className={styles.profile_job}>WEBエンジニア志望</p>
+            <p className={styles.profile_description}>
+              沖縄県でプログラミングを学んでいる24卒の就活生 /
+              思いやりをカタチにして届けられるWEBエンジニアになりたい /
+              月１で映画鑑賞 / 好きな言葉は「Don&apos;t think, just
+              do.」(トムクルーズ)
+            </p>
+          </div>
+          <div className={styles.social}>
+            <Link href={TWITTER} target="_blank" rel="noopener noreferrer">
+              <Image width={28} src={twitter} alt="logo" />
+            </Link>
+            <Link href={GITHUB} target="_blank" rel="noopener noreferrer">
+              <Image width={28} src={github} alt="logo" />
+            </Link>
+          </div>
         </div>
-        <div>
-          <h1 className={styles.name}>狩俣 成駿</h1>
-          <p className={styles.subtext}>WEBエンジニア志望</p>
-        </div>
-        <div className={styles.social}>
-          <Link href={TWITTER} target='_blank' rel="noopener noreferrer">
-            <Image width={28} src={twitter} alt="logo" />
-          </Link>
-          <Link href={GITHUB} target='_blank' rel="noopener noreferrer">
-            <Image width={28} src={github} alt="logo" />
-          </Link>
-        </div>
+        <Button
+          sx={{
+            padding: "12px 24px",
+            borderRadius: 10,
+            letterSpacing: 1.5,
+            backgroundColor: "#414345",
+            "&:hover": { backgroundColor: "425372", transition: ".3s" },
+            position: "absolute",
+            bottom: 16,
+            right: 16,
+          }}
+          variant="contained"
+          endIcon={<SendIcon />}
+        >
+          CONTACT
+        </Button>
       </main>
 
       <footer className={styles.footer}>
