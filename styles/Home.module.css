@@ -15,17 +15,23 @@
   position: relative;
 }
 
+.switch {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
 .top  {
   max-width: 440px;
 }
 
 .social {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 72px;
+  justify-content: space-evenly;
+  width: 96px;
   margin: 0 auto;
-  padding: 8px 0 24px;
+  padding: 24px 0 20px;
 }
 
 .social > a:hover {
@@ -49,22 +55,24 @@
 }
 
 .footer {
-  padding: 2rem 0;
-  background: #232B33;
+  padding: 72px 0;
+  background-color: #004B90;
+  background-image: url(../public/concrete-wall.png);
   color: #fff;
   text-align: center;
   font-size: 16px;
+  border-top-left-radius: 25vw;
 }
 
-.footer p {
-  margin: 0;
-}
-
-.footer a {
+.footer_wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  flex-direction: row-reverse;
+}
+
+.footer_wrapper > small {
+  margin-left: auto;
+  font-weight: 500;
 }
 
 .description {
