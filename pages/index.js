@@ -1,5 +1,6 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { TimelineOppositeContent } from "@mui/lab";
 import Timeline from "@mui/lab/Timeline";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
@@ -7,14 +8,11 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import { Grid } from "@mui/material";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import SkillContent from "../components/SkillContent";
 import { HREF, IMAGE_SRC } from "../config/constant";
-// import WorksCard from "../components/WorksCard";
 
 export default function Home() {
   const profile = {
@@ -22,14 +20,6 @@ export default function Home() {
     job: "WEBエンジニア志望",
     desc: "沖縄県でプログラミングを学んでいる24卒の就活生 / 思いやりをカタチにして届けられるWEBエンジニアになりたい / 月１で映画鑑賞 / 好きな言葉は「Don't think, just do.」",
   };
-
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
 
   return (
     <div className="container" style={{ padding: 0 }}>
@@ -40,6 +30,7 @@ export default function Home() {
       </Head>
 
       <main className="main">
+        {/* 画面左サイドバー */}
         <div className="sidebar">
           <ul className="sidebar_ul">
             <li className="sidebar_li">
@@ -78,6 +69,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
+        {/* プロフィールセクション */}
         <section className="section section_profile">
           <div>
             <Image
@@ -97,9 +89,59 @@ export default function Home() {
             <span>Scroll</span>
           </div>
         </section>
+        {/* エクスペリエンスセクション */}
         <section className="section section_experience">
           <p className="section_title">EXPERIENCE</p>
-          <Timeline
+          <Timeline className="timeline">
+            <TimelineItem>
+              <TimelineOppositeContent>2020年4月</TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>沖縄国際大学入学</TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineOppositeContent>2021年1月</TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>ITパスポート取得</TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineOppositeContent>2021年1月</TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>産学協同プロジェクト（株式会社オプト）</TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineOppositeContent>2021年1月</TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>デイトラWEB制作コース受講</TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineOppositeContent>2021年1月</TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>CAアドバンスインターン6day</TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineOppositeContent>2021年1月</TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+              </TimelineSeparator>
+              <TimelineContent>プロトソリューションインターン2day</TimelineContent>
+            </TimelineItem>
+          </Timeline>
+          {/* <Timeline
             position="alternate"
             sx={{ margin: 0, padding: "32px 16px 0" }}
             className="timeline"
@@ -111,7 +153,11 @@ export default function Home() {
                 />
                 <TimelineConnector sx={{ background: "#FDD001" }} />
               </TimelineSeparator>
-              <TimelineContent>2020年4月</TimelineContent>
+              <TimelineContent>
+                2020年4月
+                <br />
+                沖縄国際大学入学
+              </TimelineContent>
             </TimelineItem>
             <TimelineItem>
               <TimelineSeparator>
@@ -148,8 +194,9 @@ export default function Home() {
               </TimelineSeparator>
               <TimelineContent>2020年4月</TimelineContent>
             </TimelineItem>
-          </Timeline>
+          </Timeline> */}
         </section>
+        {/* スキルセクション */}
         <section className="section section_skills">
           <p className="section_title">SKILLS</p>
           <Grid
@@ -264,6 +311,7 @@ export default function Home() {
             />
           </Grid>
         </section>
+        {/* ワークスセクション */}
         <section className="section section_works">
           <p className="section_title">WORKS</p>
         </section>
@@ -297,7 +345,7 @@ export default function Home() {
                 Contact Me !
               </p>
               <span className="contact_icon">
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon width={20} height={20} className="contact_icon_arrow" icon={faArrowRight} />
               </span>
             </div>
           </Link>
