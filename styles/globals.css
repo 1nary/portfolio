@@ -251,7 +251,6 @@ ul {
 }
 .profile_job {
   font-size: 14px;
-  color: #aaa;
 }
 .profile_description {
   text-align: justify;
@@ -263,6 +262,21 @@ ul {
   background: #fff;
   margin: 0 auto;
   border-radius: 1.5rem;
+  padding: 32px 16px 0;
+}
+.MuiTimelineDot-filled {
+  background: #fdd001;
+  box-shadow: none;
+}
+.MuiTimelineConnector-root {
+  background: #DFDFDF;
+}
+.MuiTimelineContent-root {
+  font-weight: 500;
+}
+.MuiTimelineOppositeContent-root {
+  color: #aaa;
+
 }
 
 /* フッター */
@@ -309,6 +323,10 @@ ul {
   justify-content: center;
   align-items: center;
   color: #232b33;
+}
+.contact_icon_arrow {
+  width: 20px;
+  height: 20px;
 }
 .contact-wrap:hover .contact_icon {
   width: 72px;
